@@ -5,10 +5,22 @@ services:
     plan: free
     buildCommand: |
       pip install --upgrade pip
-      pip install --no-cache-dir --no-deps --only-binary=all --platform manylinux2014_x86_64 --implementation cp --python-version 3.10 --abi cp310 fastapi==0.95.2 uvicorn==0.22.0
+      pip install --no-cache-dir --no-deps --only-binary=all --platform manylinux2014_x86_64 --implementation cp --python-version 3.10 --abi cp310 fastapi==0.95.2 uvicorn[standard]==0.22.0
+      echo "Build completed successfully"
+      echo "Installed packages:"
+      pip list
     startCommand: |
+      echo "Starting Smart YouTube Agent..."
       cd /opt/render/project/src
-      python -m uvicorn smart_youtube_agent.main_standalone:app --host 0.0.0.0 --port $PORT --workers 1
+      echo "Current directory: $(pwd)"
+      echo "Python path: $PYTHONPATH"
+      echo "Port: $PORT"
+      echo "Files in current directory:"
+      ls -la
+      echo "Files in smart_youtube_agent directory:"
+      ls -la smart_youtube_agent/
+      echo "Starting application with start.py..."
+      python start.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
@@ -26,3 +38,5 @@ services:
         value: "1"
       - key: PYTHONPATH
         value: "/opt/render/project/src"
+      - key: RENDER
+        value: "true"
