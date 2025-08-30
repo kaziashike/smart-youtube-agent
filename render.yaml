@@ -5,8 +5,8 @@ services:
     plan: free
     buildCommand: |
       pip install --upgrade pip
-      pip install --no-cache-dir -r requirements.txt
-    startCommand: python smart_youtube_agent/main_simple.py
+      pip install --no-cache-dir --no-deps --only-binary=all --platform manylinux2014_x86_64 --implementation cp --python-version 3.10 --abi cp310 fastapi==0.95.2 uvicorn==0.22.0
+    startCommand: python smart_youtube_agent/main_standalone.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
@@ -15,4 +15,10 @@ services:
       - key: PIP_NO_CACHE_DIR
         value: "1"
       - key: PIP_DISABLE_PIP_VERSION_CHECK
+        value: "1"
+      - key: PIP_NO_BUILD_ISOLATION
+        value: "0"
+      - key: PIP_USE_PEP517
+        value: "0"
+      - key: PIP_FORCE_REINSTALL
         value: "1"
