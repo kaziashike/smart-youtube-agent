@@ -1,4 +1,4 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Enhanced Smart YouTube Agent - Main Application
 Complete SaaS platform with AI-powered video creation, chat interface, and Slack integration
@@ -6,8 +6,6 @@ Complete SaaS platform with AI-powered video creation, chat interface, and Slack
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Depends, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 import logging
 import os
 import json
@@ -45,28 +43,35 @@ app.include_router(saas_router, prefix="/api", tags=["SaaS"])
 app.include_router(dashboard_router, prefix="/dashboard", tags=["Dashboard"])
 app.include_router(video_router, tags=["Video Creation"])
 
-# Setup templates
-templates = Jinja2Templates(directory=os.path.join(os.path.dirname(__file__), "templates"))
-
-# Mount static files
-app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__), "static")), name="static")
-
 # Enhanced routes
 
 @app.get("/", response_class=HTMLResponse)
 async def landing_page(request: Request):
     """Landing page with enhanced features."""
-    return templates.TemplateResponse("landing.html", {
-        "request": request,
-        "features": [
-            "AI-powered video creation",
-            "Real-time chat with AI assistant",
-            "Slack integration",
-            "YouTube automation",
-            "SEO optimization",
-            "Multi-platform support"
-        ]
-    })
+    return HTMLResponse(content="""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Smart YouTube Agent</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            .feature { margin: 10px 0; padding: 10px; background: #f0f0f0; }
+        </style>
+    </head>
+    <body>
+        <h1>Smart YouTube Agent</h1>
+        <p>AI-powered YouTube video creation platform</p>
+        <div class="feature">AI-powered video creation</div>
+        <div class="feature">Real-time chat with AI assistant</div>
+        <div class="feature">Slack integration</div>
+        <div class="feature">YouTube automation</div>
+        <div class="feature">SEO optimization</div>
+        <div class="feature">Multi-platform support</div>
+        <p><a href="/dashboard">Go to Dashboard</a></p>
+        <p><a href="/chat">Chat with AI</a></p>
+    </body>
+    </html>
+    """)
 
 @app.get("/chat", response_class=HTMLResponse)
 async def chat_page(request: Request):
@@ -76,7 +81,35 @@ async def chat_page(request: Request):
 @app.get("/video-creator", response_class=HTMLResponse)
 async def video_creator_page(request: Request):
     """Video creator page."""
-    return templates.TemplateResponse("video_creator.html", {"request": request})
+    return HTMLResponse(content="""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Video Creator - Smart YouTube Agent</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            .form-group { margin: 15px 0; }
+            input, textarea { width: 100%; padding: 8px; margin: 5px 0; }
+            button { padding: 10px 20px; background: #007bff; color: white; border: none; }
+        </style>
+    </head>
+    <body>
+        <h1>Video Creator</h1>
+        <form>
+            <div class="form-group">
+                <label>Video Topic:</label>
+                <input type="text" placeholder="Enter your video topic">
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea placeholder="Describe your video"></textarea>
+            </div>
+            <button type="submit">Create Video with AI</button>
+        </form>
+        <p><a href="/">Back to Home</a></p>
+    </body>
+    </html>
+    """)
 
 @app.websocket("/ws/{user_id}")
 async def websocket_handler(websocket: WebSocket, user_id: str):
@@ -305,9 +338,9 @@ async def get_quick_actions(current_user: dict = Depends(get_current_user)):
                     "id": "upload_youtube",
                     "title": "Upload to YouTube",
                     "description": "Upload video to YouTube",
-                    "icon": "📤",
-                    "action": "chat:upload_youtube"
-                })
+                "icon": "📤",
+                "action": "chat:upload_youtube"
+            })
         
         actions.extend([
             {
