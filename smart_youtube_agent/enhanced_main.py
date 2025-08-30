@@ -14,7 +14,7 @@ import asyncio
 
 # Import all modules
 from .auth import get_current_user
-from enhanced_auth_routes import router as auth_router
+from .enhanced_auth_routes import router as auth_router
 from saas_routes import router as saas_router
 from dashboard import router as dashboard_router
 from video_routes import router as video_router
