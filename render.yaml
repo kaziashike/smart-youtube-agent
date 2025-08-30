@@ -6,7 +6,7 @@ services:
     buildCommand: |
       pip install --upgrade pip
       pip install --no-cache-dir --no-deps --only-binary=all --platform manylinux2014_x86_64 --implementation cp --python-version 3.10 --abi cp310 fastapi==0.95.2 uvicorn==0.22.0
-    startCommand: python smart_youtube_agent/main_standalone.py
+    startCommand: uvicorn smart_youtube_agent.main_standalone:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
