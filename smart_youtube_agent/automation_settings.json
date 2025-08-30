@@ -1,0 +1,13 @@
+{
+  "user_52b2a080acd73426": {
+    "enabled": true,
+    "niche": "Islamic",
+    "frequency": "weekly",
+    "upload_days": [
+      "wednesday"
+    ],
+    "upload_time": "04:00",
+    "last_upload": null,
+    "next_upload": "2025-08-13T04:00:00"
+  }
+}

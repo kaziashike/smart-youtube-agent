@@ -1,0 +1,101 @@
+{
+  "user_2652132a3506faea": {
+    "user_id": "user_2652132a3506faea",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-04T12:35:55.138761",
+    "end_date": "2025-08-18T12:35:55.138761",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-18T12:35:55.138761"
+  },
+  "user_f1b580d331cdee26": {
+    "user_id": "user_f1b580d331cdee26",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-04T13:59:24.129160",
+    "end_date": "2025-08-18T13:59:24.129160",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-18T13:59:24.129160"
+  },
+  "user_3700b1efa91fc200": {
+    "user_id": "user_3700b1efa91fc200",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-04T14:00:44.228218",
+    "end_date": "2025-08-18T14:00:44.228218",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-18T14:00:44.228218"
+  },
+  "user_d97d0c0cb13a5c40": {
+    "user_id": "user_d97d0c0cb13a5c40",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-04T23:16:51.251069",
+    "end_date": "2025-08-18T23:16:51.251069",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-18T23:16:51.251069"
+  },
+  "user_7cc39c9055ec5c3f": {
+    "user_id": "user_7cc39c9055ec5c3f",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-06T03:29:26.319284",
+    "end_date": "2025-08-20T03:29:26.319284",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-20T03:29:26.319284"
+  },
+  "user_0a70352a145cd19c": {
+    "user_id": "user_0a70352a145cd19c",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-06T14:27:01.366548",
+    "end_date": "2025-08-20T14:27:01.366548",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-20T14:27:01.366548"
+  },
+  "user_a03006358d449f81": {
+    "user_id": "user_a03006358d449f81",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-06T16:37:05.433791",
+    "end_date": "2025-08-20T16:37:05.433791",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-20T16:37:05.433791"
+  },
+  "user_b28c016fb0da4ac0": {
+    "user_id": "user_b28c016fb0da4ac0",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-08T04:11:19.025356",
+    "end_date": "2025-08-22T04:11:19.025356",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-22T04:11:19.025356"
+  },
+  "user_1a4d065f834ac524": {
+    "user_id": "user_1a4d065f834ac524",
+    "tier": "Free",
+    "status": "trial",
+    "start_date": "2025-08-08T04:40:00.368089",
+    "end_date": "2025-08-22T04:40:00.368089",
+    "billing_cycle": "monthly",
+    "payment_method": null,
+    "auto_renew": true,
+    "trial_ends": "2025-08-22T04:40:00.368089"
+  }
+}

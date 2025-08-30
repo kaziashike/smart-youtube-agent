@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: smart-youtube-agent
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python smart_youtube_agent/enhanced_main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PORT
+        value: 8000
