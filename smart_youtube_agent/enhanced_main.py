@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Enhanced Smart YouTube Agent - Main Application
-Complete SaaS platform with AI-powered video creation, chat interface, and Slack integration
-"""
+
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Depends, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
