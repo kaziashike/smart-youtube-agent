@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-
+"""
+Enhanced Smart YouTube Agent - Main Application
+Complete SaaS platform with AI-powered video creation, chat interface, and Slack integration
+"""
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, Depends, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
@@ -12,16 +15,16 @@ import asyncio
 # Import all modules
 from .auth import get_current_user, create_access_token
 from .enhanced_auth_routes import router as auth_router
-from saas_routes import router as saas_router
-from dashboard import router as dashboard_router
-from video_routes import router as video_router
-from ai_brain import ai_brain
-from enhanced_video_generator import enhanced_video_generator
-from slack_integration import slack_integration
-from chat_interface import chat_manager, websocket_endpoint, get_chat_html
-from video_manager import video_manager
-from automation_manager import automation_manager
-from seo_optimizer import seo_optimizer
+from .saas_routes import router as saas_router
+from .dashboard import router as dashboard_router
+from .video_routes import router as video_router
+from .ai_brain import ai_brain
+from .enhanced_video_generator import enhanced_video_generator
+from .slack_integration import slack_integration
+from .chat_interface import chat_manager, websocket_endpoint, get_chat_html
+from .video_manager import video_manager
+from .automation_manager import automation_manager
+from .seo_optimizer import seo_optimizer
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

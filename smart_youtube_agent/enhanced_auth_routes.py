@@ -8,11 +8,11 @@ import logging
 from fastapi import APIRouter, HTTPException, Depends, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
-from auth import (
+from .auth import (
     UserSignup, UserLogin, signup_user, login_user, 
     get_current_user, update_user_profile, get_user_profile
 )
-from enhanced_youtube_manager import enhanced_youtube_manager
+from .enhanced_youtube_manager import enhanced_youtube_manager
 from pathlib import Path
 import json
 
