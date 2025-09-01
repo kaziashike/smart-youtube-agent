@@ -150,7 +150,7 @@
             }
             
             try {
-                const response = await fetch('/auth/signup', {
+                const response = await fetch('/api/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -164,7 +164,7 @@
                     alert('Account created successfully! Redirecting to login...');
                     window.location.href = '/login';
                 } else {
-                    alert('Error: ' + result.detail);
+                    alert('Error: ' + (result.detail || 'Unknown error'));
                 }
             } catch (error) {
                 console.error('Error:', error);

@@ -127,7 +127,7 @@
             };
             
             try {
-                const response = await fetch('/auth/login', {
+                const response = await fetch('/api/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -139,11 +139,11 @@
                 
                 if (response.ok) {
                     // Store token in localStorage
-                    localStorage.setItem('token', result.access_token);
+                    localStorage.setItem('token', result.data.access_token);
                     alert('Login successful! Redirecting to dashboard...');
                     window.location.href = '/dashboard';
                 } else {
-                    alert('Error: ' + result.detail);
+                    alert('Error: ' + (result.detail || 'Unknown error'));
                 }
             } catch (error) {
                 console.error('Error:', error);
