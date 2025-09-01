@@ -8,10 +8,10 @@ import logging
 from fastapi import APIRouter, HTTPException, Depends, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from auth import get_current_user
-from video_manager import video_manager, VideoRequest
-from subscription_manager import subscription_manager
-from youtube_manager import YouTubeManager
+from .auth import get_current_user
+from .video_manager import video_manager, VideoRequest
+from .subscription_manager import subscription_manager
+from .youtube_manager import YouTubeManager
 from datetime import datetime
 
 # Create YouTube manager instance

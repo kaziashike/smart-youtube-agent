@@ -12,9 +12,9 @@ from typing import Dict, Any, Optional, List
 from datetime import datetime
 import httpx
 from fastapi import HTTPException
-from ai_brain import ai_brain
-from enhanced_video_generator import enhanced_video_generator
-from youtube_manager import youtube_manager
+from .ai_brain import ai_brain
+from .enhanced_video_generator import enhanced_video_generator
+from .youtube_manager import youtube_manager
 
 # Configure logging
 logger = logging.getLogger(__name__)

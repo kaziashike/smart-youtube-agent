@@ -12,9 +12,9 @@ import httpx
 import threading
 import time
 
-from auth import get_current_user
-from seo_optimizer import SEOOptimizer
-from enhanced_youtube_manager import enhanced_youtube_manager
+from .auth import get_current_user
+from .seo_optimizer import SEOOptimizer
+from .youtube_manager import youtube_manager as enhanced_youtube_manager
 
 router = APIRouter()
 

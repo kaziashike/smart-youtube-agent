@@ -12,8 +12,8 @@ from typing import Dict, Any, List, Optional
 from datetime import datetime
 from fastapi import WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
-from ai_brain import ai_brain
-from enhanced_video_generator import enhanced_video_generator
+from .ai_brain import ai_brain
+from .enhanced_video_generator import enhanced_video_generator
 
 # Configure logging
 logger = logging.getLogger(__name__)
