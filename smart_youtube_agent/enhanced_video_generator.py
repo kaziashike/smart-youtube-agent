@@ -135,7 +135,7 @@ class EnhancedVideoGenerator:
     
     async def generate_seo_optimization(self, title: str, description: str, tags: List[str]) -> Dict[str, Any]:
         """Generate SEO-optimized metadata using AI."""
-        from openrouter_utils import send_to_openrouter
+        from .openrouter_utils import send_to_openrouter
         
         seo_prompt = f"""
 Optimize this YouTube video metadata for maximum SEO performance:
@@ -226,7 +226,7 @@ Return as JSON:
     
     async def generate_script_from_topic(self, topic: str) -> str:
         """Generate script from topic using AI."""
-        from openrouter_utils import send_to_openrouter
+        from .openrouter_utils import send_to_openrouter
         
         script_prompt = f"""
 Create an engaging YouTube video script about: {topic}

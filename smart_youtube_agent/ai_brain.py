@@ -12,8 +12,8 @@ from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime
 import httpx
 from pydantic import BaseModel
-from openrouter_utils import send_to_openrouter
-from ai_memory_system import memory_system
+from .openrouter_utils import send_to_openrouter
+from .ai_memory_system import memory_system
 
 # Configure logging
 logger = logging.getLogger(__name__)
