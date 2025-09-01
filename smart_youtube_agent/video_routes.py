@@ -87,7 +87,7 @@ def _run_generation_background(user_id: str, video_id: str, request: VideoCreati
             import sys
             # Ensure import path
             sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-            from Video_agent import run as capcut_run
+            from .Video_agent import run as capcut_run
 
             # Fresh start: remove stale output
             try:

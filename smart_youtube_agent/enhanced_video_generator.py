@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 # Import the existing Video_agent
-from Video_agent import run as run_capcut_video
+from .Video_agent import run as run_capcut_video
 
 # Configure logging
 logger = logging.getLogger(__name__)
