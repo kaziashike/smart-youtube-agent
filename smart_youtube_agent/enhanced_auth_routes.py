@@ -12,7 +12,7 @@ from .auth import (
     UserSignup, UserLogin, signup_user, login_user, 
     get_current_user, update_user_profile, get_user_profile
 )
-from .youtube_manager import youtube_manager as enhanced_youtube_manager
+from .enhanced_youtube_manager import enhanced_youtube_manager
 from pathlib import Path
 import json
 
